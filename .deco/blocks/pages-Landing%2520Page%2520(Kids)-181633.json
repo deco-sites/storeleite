@@ -48,6 +48,10 @@
       "section": {
         "__resolveType": "Footer"
       }
+    },
+    {
+      "__resolveType": "site/sections/NewSection.tsx",
+      "name": "Image Conversion Tool"
     }
   ],
   "seo": {
