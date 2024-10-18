@@ -1,0 +1,23 @@
+{
+  "__resolveType": "site/apps/local/app-tags.ts",
+  "appKey": {
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "5bd4c6bbbb6e83b7cfcdbc4a7f9915c65db420c5c272b9b6d72c5f905ef0bd97"
+  },
+  "appToken": {
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "2c3149257ba40d76ba4bbe97366757b0b3853dd1c1c696a74b3dc879220ec95afac8b2c7a6c22a13a3d72ca8da47ea4f3e3e124320dd44347e0fbe290a1a347eee620fbd345517ee90d0817ac68ee75f197e041dfe1742684a3e59cad1005b560cd45c4b5417970eaf83139a1eb7d7c9a70a929bba10c0823a1338db01b6e086e39b964127b9fca34c2258b3213462ed"
+  },
+  "flagDiscountThirdFor": [],
+  "flagCustom": [],
+  "flagCustomCollection": [
+    {
+      "textRightColor": "#000000",
+      "textRightBackgroundColor": "#000000",
+      "textLeftColor": "#000000",
+      "textLeftBackgroundColor": "#000000",
+      "type": "ProductDetails"
+    }
+  ],
+  "account": "lojabagaggio"
+}
