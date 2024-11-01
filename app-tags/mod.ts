@@ -10,7 +10,6 @@ import { Flags } from "./utils/types.ts";
 
 export type AppContext = FnContext<State, Manifest>;
 
-
 export interface Props {
   /**
    * @title Account Name
@@ -26,12 +25,12 @@ export interface Props {
   appKey: Secret;
 
   /**
-  * @title X-VTEX-API-AppToken
-  * @description Secret token of the application key.
-  * @format string
-  */
+   * @title X-VTEX-API-AppToken
+   * @description Secret token of the application key.
+   * @format string
+   */
 
-  appToken: Secret
+  appToken: Secret;
 
   /**
    * @title Flag Desconto na terceira compra
@@ -43,11 +42,10 @@ export interface Props {
 
   /**@title Flags Especiais */
   flagSpecial?: FlagSpecialProps[];
-  
+
   /**@title Desconto */
   /** @description  Flag de porcetagem de desconto % */
   discount?: boolean;
-
 }
 
 // Here we define the state of the app
@@ -63,13 +61,19 @@ export interface State extends Omit<Props, "token"> {
  * @logo https://
  */
 export default function App(props: Props): App<Manifest, State> {
-  const { appKey, appToken, account: _account, flagCustom, flagDiscountThirdFor } = props;
+  const {
+    appKey,
+    appToken,
+    account: _account,
+    flagCustom,
+    flagDiscountThirdFor,
+  } = props;
 
   // const stringAppToken = typeof appToken === "string" ? appToken : appToken?.get() ?? "";
 
   // const stringAppKey = typeof appKey === "string" ? appKey : appKey?.get() ?? "";
 
-  console.log("chave da api", typeof appKey)
+  console.log("chave da api", typeof appKey);
 
   const api = createHttpClient<VCS>({
     base: `https://${_account}.vtexcommercestable.com.br`,
@@ -77,8 +81,8 @@ export default function App(props: Props): App<Manifest, State> {
     headers: new Headers({
       "Accept": "application/json",
       "Content-Type": "application/json",
-      "X-VTEX-API-AppKey": appKey?.get() ?? '',
-      "X-VTEX-API-AppToken": appToken?.get() ?? '',
+      "X-VTEX-API-AppKey": appKey?.get() ?? "",
+      "X-VTEX-API-AppToken": appToken?.get() ?? "",
     }),
   });
 

@@ -11,14 +11,13 @@ const loader = (
   const flagDiscountThirdFor = ctx.flagDiscountThirdFor;
   const flagCustom = ctx.flagCustom;
   const flagSpecial = ctx.flagSpecial;
-  const discount = ctx.discount; 
-
+  const discount = ctx.discount;
 
   const result = {
     flagDiscountThirdFor: flagDiscountThirdFor,
     flagCustom: flagCustom,
     flagSpecial: flagSpecial,
-    discount: discount
+    discount: discount,
   };
 
   return result;
